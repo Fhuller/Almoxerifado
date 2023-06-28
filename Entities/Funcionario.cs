@@ -19,6 +19,9 @@ namespace Entities
 
         public Funcionario(string nome, int matricula, string assinatura, string cargo)
         {
+            if (String.IsNullOrEmpty(nome))
+                throw new ArgumentNullException("Nome Vazio!");
+
             Nome = nome;
             Matricula = matricula;
             Assinatura = assinatura;
