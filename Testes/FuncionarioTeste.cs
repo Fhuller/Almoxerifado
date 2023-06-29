@@ -11,9 +11,9 @@ namespace TesteUnitarioAlmoxerifado
         [Fact]
         public void CadastroFuncionario()
         {
-            Funcionario teste = new ("Xusto", 123, "Alexundro", "Desempregado");
+            Funcionario teste = new Funcionario("Xusto", 123, "Alexundro", "Desempregado");
             
-            Funcionario funcionarioTeste = new(teste.Nome, teste.Matricula, teste.Assinatura, teste.Cargo);
+            Funcionario funcionarioTeste = new Funcionario(teste.Nome, teste.Matricula, teste.Assinatura, teste.Cargo);
 
             teste.ToExpectedObject().ShouldEqual(funcionarioTeste);
 
